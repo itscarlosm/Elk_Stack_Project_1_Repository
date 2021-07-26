@@ -115,7 +115,7 @@ The playbook implements the following tasks:
         state: started
         restart_policy: always
    
-        '''   
+        '''html   
         published_ports:
           -  5601:5601
           -  9200:9200
