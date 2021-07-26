@@ -84,31 +84,31 @@ The playbook implements the following tasks:
 
 - Install python3-pip
 
-    1. - name: Install python3-pip
-      2. apt:
-        3. force_apt_get: yes
-        4. name: python3-pip
-        5. state: present
+    - name: Install python3-pip
+      apt:
+        force_apt_get: yes
+        name: python3-pip
+        state: present
 
 - Install docker module
 
-    1. - name: Install Docker module
-      2. pip:
-        3. name: docker
-        4. state: present
+    - name: Install Docker module
+      pip:
+        name: docker
+        state: present
 
 - Increase virtual memory
 
-       '''name: Use more memory
+    - name: Use more memory
       sysctl:
         name: vm.max_map_count
         value: '262144'
         state: present
-        reload: yes'''
+        reload: yes
 
 - Download, launch and expose the elk container
 
-    '''- name: download and launch a docker elk container
+    - name: download and launch a docker elk container
       docker_container:
         name: elk
         image: sebp/elk:761
@@ -118,7 +118,7 @@ The playbook implements the following tasks:
         published_ports:
           -  5601:5601
           -  9200:9200
-          -  5044:5044'''
+          -  5044:5044
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
