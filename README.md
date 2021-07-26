@@ -74,7 +74,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 - Install docker.io
-    # Use apt module
+ 
     - name: Install docker.io
       apt:
         update_cache: yes
@@ -83,7 +83,7 @@ The playbook implements the following tasks:
         state: present
 
 - Install python3-pip
-      # Use apt module
+
     - name: Install python3-pip
       apt:
         force_apt_get: yes
@@ -91,14 +91,14 @@ The playbook implements the following tasks:
         state: present
 
 - Install docker module
-      # Use pip module (It will default to pip3)
+
     - name: Install Docker module
       pip:
         name: docker
         state: present
 
 - Increase virtual memory
-       # Use sysctl module
+
     - name: Use more memory
       sysctl:
         name: vm.max_map_count
@@ -107,7 +107,7 @@ The playbook implements the following tasks:
         reload: yes
 
 - Download, launch and expose the elk container
-       # Use docker_container module
+
     - name: download and launch a docker elk container
       docker_container:
         name: elk
