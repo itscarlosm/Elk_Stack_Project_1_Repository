@@ -108,17 +108,19 @@ The playbook implements the following tasks:
 
 - Download, launch and expose the elk container
 
-    1. - name: download and launch a docker elk container
-      2. docker_container:
-        3. name: elk
-        4. image: sebp/elk:761
-        5. state: started
-        6. restart_policy: always
-        
-        7. published_ports:
-          8. -  5601:5601
-          9. -  9200:9200
-          10. -  5044:5044
+    - name: download and launch a docker elk container
+      docker_container:
+        name: elk
+        image: sebp/elk:761
+        state: started
+        restart_policy: always
+   
+'''   
+        published_ports:
+          -  5601:5601
+          -  9200:9200
+          -  5044:5044
+'''
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
