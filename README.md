@@ -99,12 +99,12 @@ The playbook implements the following tasks:
 
 - Increase virtual memory
 
-    1. - name: Use more memory
-      2. sysctl:
-        3. name: vm.max_map_count
-        4. value: '262144'
-        5. state: present
-        6. reload: yes
+    '''- name: Use more memory
+      sysctl:
+        name: vm.max_map_count
+        value: '262144'
+        state: present
+        reload: yes'''
 
 - Download, launch and expose the elk container
 
