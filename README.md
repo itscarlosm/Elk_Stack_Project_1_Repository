@@ -115,12 +115,11 @@ The playbook implements the following tasks:
         state: started
         restart_policy: always
    
-'''   
+        '''   
         published_ports:
           -  5601:5601
           -  9200:9200
-          -  5044:5044
-'''
+          -  5044:5044'''
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
