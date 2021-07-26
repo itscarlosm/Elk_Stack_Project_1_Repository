@@ -99,7 +99,7 @@ The playbook implements the following tasks:
 
 - Increase virtual memory
 
-    '''- name: Use more memory
+       '''name: Use more memory
       sysctl:
         name: vm.max_map_count
         value: '262144'
